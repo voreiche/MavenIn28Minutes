@@ -16,7 +16,6 @@ import com.in28minutes.example.layering.model.api.client.Client;
 import com.in28minutes.example.layering.model.api.client.Currency;
 import com.in28minutes.example.layering.model.api.client.Product;
 import com.in28minutes.example.layering.model.impl.client.AmountImpl;
-
 /**
  * Data Object for the Client entity.
  */

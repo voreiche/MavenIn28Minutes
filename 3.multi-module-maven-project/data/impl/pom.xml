@@ -5,7 +5,7 @@
     <parent>
 	    <groupId>com.in28minutes.example.layering</groupId>
     	<artifactId>in28minutes-multi-module-data</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
+    	<version>1.0.1-SNAPSHOT</version>
     </parent>
 
     <packaging>jar</packaging>
@@ -17,10 +17,12 @@
         <dependency>
             <groupId>com.in28minutes.example.layering</groupId>
             <artifactId>in28minutes-multi-module-model</artifactId>
+             <version>1.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.in28minutes.example.layering</groupId>
             <artifactId>in28minutes-multi-module-data-api</artifactId>
+            <version>1.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>

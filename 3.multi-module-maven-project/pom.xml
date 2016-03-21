@@ -5,13 +5,15 @@
 	<packaging>pom</packaging>
 	<groupId>com.in28minutes.example.layering</groupId>
 	<artifactId>parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>${project.artifactId}</name>
 	<description>This pom acts as the parent pom for the entire project.</description>
 
 	<properties>
-		<spring-core-version>4.1.6.RELEASE</spring-core-version>
-		<spring-aop-version>4.1.6.RELEASE</spring-aop-version>
+		<spring-core-version>4.1.9.RELEASE</spring-core-version>
+		<spring-aop-version>4.1.9.RELEASE</spring-aop-version>
+		<spring-security-core-version>4.0.4.RELEASE</spring-security-core-version>
+		<spring-asm-version>3.1.4.RELEASE</spring-asm-version>
 	</properties>
 
 	<modules>
@@ -20,6 +22,7 @@
 		<module>business</module>
 	</modules>
 
+	<!-- 
 	<scm>
 		<developerConnection>
             scm:svn:URL TO SVN REPOSITORY
@@ -29,7 +32,7 @@
         </connection>
 		<url>URL TO SVN REPOSITORY</url>
 	</scm>
-
+ 	-->
 
 	<dependencyManagement>
 		<dependencies>
@@ -43,7 +46,7 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-asm</artifactId>
-				<version>${spring-aop-version}</version>
+				<version>${spring-asm-version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -118,7 +121,7 @@
 			<dependency>
 				<groupId>org.springframework.security</groupId>
 				<artifactId>spring-security-core</artifactId>
-				<version>${spring-core-version}</version>
+				<version>${spring-security-core-version}</version>
 			</dependency>
 			<dependency>
 				<groupId>log4j</groupId>
@@ -128,7 +131,7 @@
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>4.10</version>
+				<version>4.12</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
@@ -144,31 +147,6 @@
 				<scope>test</scope>
 			</dependency>
 
-			<dependency>
-				<groupId>com.in28minutes.example.layering</groupId>
-				<artifactId>in28minutes-multi-module-model</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.in28minutes.example.layering</groupId>
-				<artifactId>in28minutes-multi-module-data-api</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.in28minutes.example.layering</groupId>
-				<artifactId>in28minutes-multi-module-data-impl</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.in28minutes.example.layering</groupId>
-				<artifactId>in28minutes-multi-module-business-api</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.in28minutes.example.layering</groupId>
-				<artifactId>in28minutes-multi-module-business-impl</artifactId>
-				<version>${project.version}</version>
-			</dependency>
 
 		</dependencies>
 	</dependencyManagement>
@@ -177,7 +155,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
+				<version>3.5.1</version>
 				<configuration>
 					<verbose>true</verbose>
 					<source>1.8</source>
